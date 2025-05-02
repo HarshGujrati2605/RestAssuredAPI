@@ -10,22 +10,30 @@ import dataproviderutility.BookData;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import payloadutilitis.LibraryPojoclass;
 import payloadutilitis.PayloadLibrary;
 import variableutility.GlobalVariable;
 
 import static org.hamcrest.Matchers.*;
 
-public class AddBookPostAPIDataProvider {
+public class AddBookPostAPIDataProviderWithPOJO {
 
 	@Test(testName = "Add new book dynamically", priority = 1, groups = "Regression", dataProviderClass = BookData.class, dataProvider = "Book Data")
 	public void addbook(String aisle, String isbn) {
 
 		RestAssured.baseURI = "http://216.10.245.166";
 		
-		GlobalVariable.isbnlist.add(isbn);           
+		GlobalVariable.isbnlist.add(isbn);  
+		
+		LibraryPojoclass m = new LibraryPojoclass();
+		
+		m.setName("Java Automation");
+		m.setIsbn(isbn);
+		m.setAisle(aisle);
+		m.setAuthor("Harry");
          
 		Response response = given().log().all().header("Content-Type", "application/json")
-				.body(PayloadLibrary.getbooklibrarayjson(aisle , isbn)).when().post("/Library/Addbook.php").then().log()
+				.body(m).when().post("/Library/Addbook.php").then().log()
 				.all().statusCode(200).extract().response();
 
 		JsonPath json = new JsonPath(response.asString());

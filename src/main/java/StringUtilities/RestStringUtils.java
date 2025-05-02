@@ -4,7 +4,7 @@ package StringUtilities;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
-public class RestUtils {
+public class RestStringUtils {
 	
 
 	public static String getName() {
