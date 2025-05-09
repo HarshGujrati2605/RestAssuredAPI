@@ -3,11 +3,16 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestCases.GoogleAPIPostValidations">
+      <class name="testcaseslibrary.AddBookPostAPIDataProviderWithPOJO">
         <methods>
-          <include name="validateAPITestOne"/>
+          <include name="addbook" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- TestCases.GoogleAPIPostValidations -->
+      </class> <!-- testcaseslibrary.AddBookPostAPIDataProviderWithPOJO -->
+      <class name="testcaseslibrary.AddBookPostAPIDataProviderUsingExcel">
+        <methods>
+          <include name="addbook" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- testcaseslibrary.AddBookPostAPIDataProviderUsingExcel -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

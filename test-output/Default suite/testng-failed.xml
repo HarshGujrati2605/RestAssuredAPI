@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="librarytestcases.AddBookPostAPIDataProviderWithPOJO">
+      <class name="testcasesgooglemap.GoogleAPIGetValidations">
         <methods>
-          <include name="getCreatedLibraryBookValidation"/>
+          <include name="getapivalidations"/>
         </methods>
-      </class> <!-- librarytestcases.AddBookPostAPIDataProviderWithPOJO -->
+      </class> <!-- testcasesgooglemap.GoogleAPIGetValidations -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

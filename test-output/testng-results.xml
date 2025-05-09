@@ -1,61 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="9" passed="5" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-02T16:54:04 IST" name="Default suite" finished-at="2025-05-02T16:54:06 IST" duration-ms="2328">
+  <suite started-at="2025-05-09T15:59:35 IST" name="Suite" finished-at="2025-05-09T15:59:39 IST" duration-ms="4322">
     <groups>
       <group name="Regression">
-        <method signature="AddBookPostAPIDataProviderWithPOJO.addbook(java.lang.String,java.lang.String)[pri:1, instance:librarytestcases.AddBookPostAPIDataProviderWithPOJO@2794eab6]" name="addbook" class="librarytestcases.AddBookPostAPIDataProviderWithPOJO"/>
+        <method signature="AddBookPostAPIDataProvider.addbook(java.lang.String,java.lang.String)[pri:1, instance:testcaseslibrary.AddBookPostAPIDataProvider@298a5e20]" name="addbook" class="testcaseslibrary.AddBookPostAPIDataProvider"/>
+        <method signature="AddBookPostAPIDataProviderUsingExcel.addbook(java.lang.String,java.lang.String)[pri:1, instance:testcaseslibrary.AddBookPostAPIDataProviderUsingExcel@15bb5034]" name="addbook" class="testcaseslibrary.AddBookPostAPIDataProviderUsingExcel"/>
+        <method signature="AddBookPostAPIDataProviderWithPOJO.addbook(java.lang.String,java.lang.String)[pri:1, instance:testcaseslibrary.AddBookPostAPIDataProviderWithPOJO@2eae8e6e]" name="addbook" class="testcaseslibrary.AddBookPostAPIDataProviderWithPOJO"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2025-05-02T16:54:04 IST" name="Default test" finished-at="2025-05-02T16:54:06 IST" duration-ms="2328">
-      <class name="librarytestcases.AddBookPostAPIDataProviderWithPOJO">
-        <test-method signature="addbook(java.lang.String,java.lang.String)[pri:1, instance:librarytestcases.AddBookPostAPIDataProviderWithPOJO@2794eab6]" started-at="2025-05-02T16:54:04 IST" name="addbook" data-provider="Book Data" finished-at="2025-05-02T16:54:06 IST" duration-ms="2011" status="PASS">
+    <test started-at="2025-05-09T15:59:35 IST" name="Test" finished-at="2025-05-09T15:59:39 IST" duration-ms="4322">
+      <class name="testcaseslibrary.AddBookPostAPIDataProviderUsingExcel">
+        <test-method signature="addbook(java.lang.String,java.lang.String)[pri:1, instance:testcaseslibrary.AddBookPostAPIDataProviderUsingExcel@15bb5034]" started-at="2025-05-09T15:59:38 IST" name="addbook" data-provider="BookDataFromExcel" finished-at="2025-05-09T15:59:38 IST" duration-ms="94" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[1236]]>
+                <![CDATA[abcvs]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[aidip]]>
+                <![CDATA[8966]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addbook -->
-        <test-method signature="addbook(java.lang.String,java.lang.String)[pri:1, instance:librarytestcases.AddBookPostAPIDataProviderWithPOJO@2794eab6]" started-at="2025-05-02T16:54:06 IST" name="addbook" data-provider="Book Data" finished-at="2025-05-02T16:54:06 IST" duration-ms="125" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[7896]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[aidpq]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addbook -->
-        <test-method signature="getCreatedLibraryBookValidation()[pri:2, instance:librarytestcases.AddBookPostAPIDataProviderWithPOJO@2794eab6]" started-at="2025-05-02T16:54:06 IST" name="getCreatedLibraryBookValidation" finished-at="2025-05-02T16:54:06 IST" duration-ms="136" status="FAIL">
-          <exception class="java.lang.AssertionError">
+          <exception class="io.restassured.path.json.exception.JsonPathException">
             <message>
-              <![CDATA[expected [aidip] but found [aidpq]]]>
+              <![CDATA[Failed to parse the JSON document]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [aidip] but found [aidpq]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at librarytestcases.AddBookPostAPIDataProviderWithPOJO.getCreatedLibraryBookValidation(AddBookPostAPIDataProviderWithPOJO.java:66)
+              <![CDATA[io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
+at testcaseslibrary.AddBookPostAPIDataProviderUsingExcel.addbook(AddBookPostAPIDataProviderUsingExcel.java:32)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -84,13 +65,296 @@ at org.testng.TestNG.run(TestNG.java:1101)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
+at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+... 33 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- io.restassured.path.json.exception.JsonPathException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addbook -->
+        <test-method signature="addbook(java.lang.String,java.lang.String)[pri:1, instance:testcaseslibrary.AddBookPostAPIDataProviderUsingExcel@15bb5034]" started-at="2025-05-09T15:59:38 IST" name="addbook" data-provider="BookDataFromExcel" finished-at="2025-05-09T15:59:38 IST" duration-ms="97" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abnmj]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.restassured.path.json.exception.JsonPathException">
+            <message>
+              <![CDATA[Failed to parse the JSON document]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
+at testcaseslibrary.AddBookPostAPIDataProviderUsingExcel.addbook(AddBookPostAPIDataProviderUsingExcel.java:32)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
+at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.restassured.path.json.exception.JsonPathException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addbook -->
+      </class> <!-- testcaseslibrary.AddBookPostAPIDataProviderUsingExcel -->
+      <class name="testcasesgooglemap.GoogleAPIPostValidations">
+        <test-method signature="validateAPITestOne()[pri:1, instance:testcasesgooglemap.GoogleAPIPostValidations@7d0b7e3c]" started-at="2025-05-09T15:59:37 IST" name="validateAPITestOne" finished-at="2025-05-09T15:59:37 IST" duration-ms="505" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAPITestOne -->
+      </class> <!-- testcasesgooglemap.GoogleAPIPostValidations -->
+      <class name="testcaseslibrary.AddBookPostAPIDataProviderWithPOJO">
+        <test-method signature="addbook(java.lang.String,java.lang.String)[pri:1, instance:testcaseslibrary.AddBookPostAPIDataProviderWithPOJO@2eae8e6e]" started-at="2025-05-09T15:59:38 IST" name="addbook" data-provider="Book Data" finished-at="2025-05-09T15:59:39 IST" duration-ms="378" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1236]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[aidip]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.restassured.path.json.exception.JsonPathException">
+            <message>
+              <![CDATA[Failed to parse the JSON document]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
+at CommonUtilities.JsonConversionUtilities.getRawToJsonData(JsonConversionUtilities.java:10)
+at testcaseslibrary.AddBookPostAPIDataProviderWithPOJO.addbook(AddBookPostAPIDataProviderWithPOJO.java:36)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
+at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+... 34 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.restassured.path.json.exception.JsonPathException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addbook -->
+        <test-method signature="addbook(java.lang.String,java.lang.String)[pri:1, instance:testcaseslibrary.AddBookPostAPIDataProviderWithPOJO@2eae8e6e]" started-at="2025-05-09T15:59:39 IST" name="addbook" data-provider="Book Data" finished-at="2025-05-09T15:59:39 IST" duration-ms="82" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7896]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[aidpq]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.restassured.path.json.exception.JsonPathException">
+            <message>
+              <![CDATA[Failed to parse the JSON document]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
+at CommonUtilities.JsonConversionUtilities.getRawToJsonData(JsonConversionUtilities.java:10)
+at testcaseslibrary.AddBookPostAPIDataProviderWithPOJO.addbook(AddBookPostAPIDataProviderWithPOJO.java:36)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
+at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+... 34 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.restassured.path.json.exception.JsonPathException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addbook -->
+        <test-method signature="getCreatedLibraryBookValidation()[pri:2, instance:testcaseslibrary.AddBookPostAPIDataProviderWithPOJO@2eae8e6e]" started-at="2025-05-09T15:59:39 IST" name="getCreatedLibraryBookValidation" finished-at="2025-05-09T15:59:39 IST" duration-ms="254" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getCreatedLibraryBookValidation -->
-      </class> <!-- librarytestcases.AddBookPostAPIDataProviderWithPOJO -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testcaseslibrary.AddBookPostAPIDataProviderWithPOJO -->
+      <class name="testcaseslibrary.AddBookPostAPIDataProvider">
+        <test-method signature="addbook(java.lang.String,java.lang.String)[pri:1, instance:testcaseslibrary.AddBookPostAPIDataProvider@298a5e20]" started-at="2025-05-09T15:59:35 IST" name="addbook" data-provider="Book Data" finished-at="2025-05-09T15:59:36 IST" duration-ms="1747" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1236]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[aidip]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addbook -->
+        <test-method signature="addbook(java.lang.String,java.lang.String)[pri:1, instance:testcaseslibrary.AddBookPostAPIDataProvider@298a5e20]" started-at="2025-05-09T15:59:36 IST" name="addbook" data-provider="Book Data" finished-at="2025-05-09T15:59:36 IST" duration-ms="118" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7896]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[aidpq]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addbook -->
+        <test-method signature="getCreatedLibraryBookValidation()[pri:2, instance:testcaseslibrary.AddBookPostAPIDataProvider@298a5e20]" started-at="2025-05-09T15:59:36 IST" name="getCreatedLibraryBookValidation" finished-at="2025-05-09T15:59:37 IST" duration-ms="285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCreatedLibraryBookValidation -->
+      </class> <!-- testcaseslibrary.AddBookPostAPIDataProvider -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
