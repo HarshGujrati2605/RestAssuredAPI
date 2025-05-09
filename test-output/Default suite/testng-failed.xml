@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcasesgooglemap.GoogleAPIGetValidations">
+      <class name="academiatestcases.TC01AlumniNewsFeedValidation">
         <methods>
-          <include name="getapivalidations"/>
+          <include name="postalumninewsandfeeds"/>
         </methods>
-      </class> <!-- testcasesgooglemap.GoogleAPIGetValidations -->
+      </class> <!-- academiatestcases.TC01AlumniNewsFeedValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
