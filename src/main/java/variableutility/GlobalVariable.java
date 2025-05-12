@@ -20,5 +20,15 @@ public class GlobalVariable {
    public List<Api> apiCourses;
    
    public String[] courseTitles = { "Selenium Webdriver Java", "Cypress", "Protractor" };
+   
+   public static String alumninewsfeedname;
+   
+   public static String alumninewsfeednameedit;
+   
+   public static int alumninewsid;
+   
+   public static String alumninewscode;
+   
+   
 
 }

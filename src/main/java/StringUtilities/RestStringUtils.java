@@ -9,7 +9,7 @@ public class RestStringUtils {
 
 	public static String getName() {
 
-		String name = RandomStringUtils.randomAlphabetic(6);
+		String name = RandomStringUtils.randomAlphabetic(8);
 		return "AutomationName " +name;
 	}
 	
@@ -19,6 +19,9 @@ public class RestStringUtils {
 		String name = RandomStringUtils.randomAlphabetic(10);
 		return name+"@testautomation.com";
 	}
+	
+	
+	
 	
 	
 	

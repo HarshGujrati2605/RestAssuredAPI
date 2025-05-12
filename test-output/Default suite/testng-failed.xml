@@ -5,6 +5,10 @@
     <classes>
       <class name="academiatestcases.TC01AlumniNewsFeedValidation">
         <methods>
+          <include name="validatealumninewsandfeeds"/>
+          <include name="searchalumninewsandfeeds"/>
+          <include name="deletealumninewsandfeeds"/>
+          <include name="editalumninewsandfeeds"/>
           <include name="postalumninewsandfeeds"/>
         </methods>
       </class> <!-- academiatestcases.TC01AlumniNewsFeedValidation -->
