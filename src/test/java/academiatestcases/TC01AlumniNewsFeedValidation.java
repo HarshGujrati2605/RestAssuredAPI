@@ -13,10 +13,11 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import payloadutilitis.PayloadAlumniNews;
+import pojo.AlumniPojo;
 import specbuilder.newsandfeedspecs;
 import variableutility.GlobalVariable;
 
-public class TC01AlumniNewsFeedValidation {
+public class TC01AlumniNewsFeedValidation extends AlumniPojo{
 
 	@Test(testName = "Alumni news feed creation")
 	public void postalumninewsandfeeds() {
@@ -39,8 +40,8 @@ public class TC01AlumniNewsFeedValidation {
 				.queryParam("startDate", "").queryParam("endDate", "").queryParam("page", 1).queryParam("start", 0)
 				.queryParam("limit", 10).accept(ContentType.JSON).when().get().then().log().all().statusCode(200)
 				.extract().response();
-		GlobalVariable.alumninewsid = JsonConversionUtilities.getRawToJsonDataInt(response.asString(), "rows[0].id");
-	    
+		//GlobalVariable.alumninewsid =JsonConversionUtilities.getRawToJsonDataInt(response.asString(), "rows[0].id") ;
+	    setAlumninewsid(JsonConversionUtilities.getRawToJsonDataInt(response.asString(), "rows[0].id"));
 	
 	}
 
@@ -57,9 +58,10 @@ public class TC01AlumniNewsFeedValidation {
 		System.out.println(title);
 		String status = JsonConversionUtilities.getRawToJsonData(response.asString(), "status");
 		System.out.println(status);
-		GlobalVariable.alumninewscode = JsonConversionUtilities.getRawToJsonData(response.asString(), "code");
-		System.out.println(GlobalVariable.alumninewscode);
-		assertEquals(title, GlobalVariable.alumninewsfeedname);
+		//GlobalVariable.alumninewscode = JsonConversionUtilities.getRawToJsonData(response.asString(), "code");
+		setAlumninewscode( JsonConversionUtilities.getRawToJsonData(response.asString(), "code"));	
+		System.out.println(getAlumninewscode());
+		assertEquals(title, getAlumninewsfeedname());
 		assertEquals(status, "UNPUBLISHED");
 
 	}

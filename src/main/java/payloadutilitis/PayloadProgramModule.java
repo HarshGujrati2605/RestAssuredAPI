@@ -1,15 +1,21 @@
 package payloadutilitis;
 
 import StringUtilities.StringUtils;
+import pojo.programpojo;
+import variableutility.GlobalVariable;
 
-public class PayloadProgramModule {
+public class PayloadProgramModule extends programpojo{
 	
 	public static String createProgramPayload() {
 		
+		setProgramcode(StringUtils.randomPrgCodeGenerator());
+	    setProgramename(StringUtils.randomProgramNamegenerator());
+		
+		
 		return "{\r\n"
 				+ "  \"version\": \"\",\r\n"
-				+ "  \"programCode\": \""+StringUtils.randomPrgCodeGenerator()+"\",\r\n"
-				+ "  \"programName\": \""+StringUtils.randomProgramNamegenerator()+"\",\r\n"
+				+ "  \"programCode\": \""+getProgramcode()+"\",\r\n"
+				+ "  \"programName\": \""+getProgramename()+"\",\r\n"
 				+ "  \"academyLocation\": {\r\n"
 				+ "    \"id\": 1\r\n"
 				+ "  },\r\n"

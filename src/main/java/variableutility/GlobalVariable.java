@@ -29,6 +29,15 @@ public class GlobalVariable {
    
    public static String alumninewscode;
    
+   public static String programename;
+   
+   public static String programcode;
+
+
+
+
+   
+   
    
 
 }

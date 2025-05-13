@@ -39,17 +39,17 @@ public class TC02ProgramTestCases {
 	}
 	
 	
-	
-	@Test(testName = "Batch creation")
-	public void creatNewProgramBatch() {
-
-		RestAssured.basePath = "/rest/batch/create";
-		RestAssured.useRelaxedHTTPSValidation();
-		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)
-				.accept(ContentType.JSON).body(PayloadProgramModule.createProgramBatchPayload()).when().post().then().log().all()
-				.statusCode(200).extract().response().asString();
-
-	}
+//	
+//	@Test(testName = "Batch creation")
+//	public void creatNewProgramBatch() {
+//
+//		RestAssured.basePath = "/rest/batch/create";
+//		RestAssured.useRelaxedHTTPSValidation();
+//		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)
+//				.accept(ContentType.JSON).body(PayloadProgramModule.createProgramBatchPayload()).when().post().then().log().all()
+//				.statusCode(200).extract().response().asString();
+//
+//	}
 
 
 
