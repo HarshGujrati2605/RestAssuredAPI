@@ -27,13 +27,29 @@ public class programpojo extends GlobalVariable {
 	public static void setProgramidreceived(String programidreceived) {
 		GlobalVariable.programidreceived = programidreceived;
 	}
-	
+
 	public static String getBatchidreceived() {
 		return batchidreceived;
 	}
 
 	public static void setBatchidreceived(String batchidreceived) {
 		GlobalVariable.batchidreceived = batchidreceived;
+	}
+
+	public static String getPeriodname() {
+		return periodname;
+	}
+
+	public static void setPeriodname(String periodname) {
+		GlobalVariable.periodname = periodname;
+	}
+
+	public static String getPeriodidreceived() {
+		return periodidreceived;
+	}
+
+	public static void setPeriodidreceived(String periodidreceived) {
+		GlobalVariable.periodidreceived = periodidreceived;
 	}
 
 }
