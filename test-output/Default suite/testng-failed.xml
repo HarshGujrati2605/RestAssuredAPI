@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="academiatestcases.TC01AlumniNewsFeedValidation">
+      <class name="academiatestcases.TC02ProgramTestCases">
         <methods>
-          <include name="validatealumninewsandfeeds"/>
-          <include name="searchalumninewsandfeeds"/>
-          <include name="editalumninewsandfeeds"/>
-          <include name="postalumninewsandfeeds"/>
+          <include name="programSearch"/>
+          <include name="creatNewProgram"/>
         </methods>
-      </class> <!-- academiatestcases.TC01AlumniNewsFeedValidation -->
+      </class> <!-- academiatestcases.TC02ProgramTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

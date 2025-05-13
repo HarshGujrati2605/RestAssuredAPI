@@ -15,7 +15,7 @@ public class GlobalVariable {
 	
 	public static List<String> isbnlist = new ArrayList<String>();
 	
-   public String accessToken;
+   public static String accessToken;
    
    public List<Api> apiCourses;
    
@@ -27,7 +27,7 @@ public class GlobalVariable {
    
    public static int alumninewsid;
    
-   public static String alumninewscode;
+   public static String alumninewscode;   
    
    public static String programename;
    

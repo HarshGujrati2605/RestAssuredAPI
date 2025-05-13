@@ -2,6 +2,7 @@ package payloadutilitis;
 
 
 import StringUtilities.StringUtils;
+import javautilities.BaseClass;
 import pojo.AlumniPojo;
 import variableutility.GlobalVariable;
 
@@ -9,7 +10,7 @@ public class PayloadAlumniNews extends AlumniPojo {
 	
 	
 	
-	public static String alumninewspayload() {
+	public static String alumninewspayload(){
 		setAlumninewsfeedname(StringUtils.getName());
 		return "{\"title\": \""+getAlumninewsfeedname()+"\",\"imageUrl\":\"Alumni/NewsAndFeed/alumni_Screenshot 2025-01-29 122117_1741342561.png\",\"status\":\"UNPUBLISHED\",\"alumniNewsAndFeedsMapping\":[{\"academyLocation\":{\"id\":1}}]}";
 	}
