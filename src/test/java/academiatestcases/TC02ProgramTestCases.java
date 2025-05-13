@@ -17,9 +17,23 @@ import specbuilder.newsandfeedspecs;
 import variableutility.GlobalVariable;
 
 public class TC02ProgramTestCases extends programpojo{
-	@Test(testName = "Program creation")
-	public void creatNewProgram() throws Exception {
+	
+	@Test(priority = 1, testName = "Create Course")
+	public void creatNewCourse() throws Exception {
 		setAccessToken(BaseClass.getAccessToken());
+		RestAssured.basePath = "/rest/course/create";
+		RestAssured.useRelaxedHTTPSValidation();
+		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)
+				.accept(ContentType.JSON).body(PayloadProgramModule.CreateCoursePayload()).log().all().when().post().then()
+				.statusCode(200).extract().response().asString();		
+		System.out.println("Cousre Id : "+response.trim());
+		
+		GlobalVariable.CourseId = Integer.parseInt(response);
+
+	}	
+	
+	@Test(testName = "Program creation", dependsOnMethods = "creatNewCourse")
+	public void creatNewProgram() throws Exception {
 		RestAssured.basePath = "/rest/program/create";
 		RestAssured.useRelaxedHTTPSValidation();
 		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)

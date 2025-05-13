@@ -27,5 +27,17 @@ public class programpojo extends GlobalVariable{
 	public static void setAccessToken(String accessToken) {
 		GlobalVariable.accessToken = accessToken;
 	}
+	public static String getCoursecode() {
+		return coursecode;
+	}
+	public static void setCoursecode(String coursecode) {
+		GlobalVariable.coursecode = coursecode;
+	}
+	public static String getCoursename() {
+		return coursename;
+	}
+	public static void setCoursename(String coursename) {
+		GlobalVariable.coursename = coursename;
+	}
 
 }

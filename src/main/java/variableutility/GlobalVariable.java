@@ -32,6 +32,13 @@ public class GlobalVariable {
    public static String programename;
    
    public static String programcode;
+   
+   public static String coursecode;
+   public static String coursename;
+
+   public static int CourseId;
+   
+
 
 
 
