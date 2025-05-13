@@ -17,6 +17,7 @@ import specbuilder.newsandfeedspecs;
 import variableutility.GlobalVariable;
 
 public class TC02ProgramTestCases extends programpojo{
+
 	
 	@Test(priority = 1, testName = "Create Course")
 	public void creatNewCourse() throws Exception {
@@ -28,7 +29,7 @@ public class TC02ProgramTestCases extends programpojo{
 				.statusCode(200).extract().response().asString();		
 		System.out.println("Cousre Id : "+response.trim());
 		
-		GlobalVariable.CourseId = Integer.parseInt(response);
+		GlobalVariable.courseIdrecived = Integer.parseInt(response);
 
 	}	
 	
@@ -39,33 +40,57 @@ public class TC02ProgramTestCases extends programpojo{
 		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)
 				.accept(ContentType.JSON).body(PayloadProgramModule.createProgramPayload()).when().post().then().log().all()
 				.statusCode(200).extract().response().asString();
+		
+		setProgramidreceived(response);
+		System.out.println(getProgramidreceived());
 
 	}
 	
 	
-	@Test(testName = "Program search" , dependsOnMethods = "creatNewProgram")
+
+	@Test(testName = "Program search and validation" , dependsOnMethods = "creatNewProgram")
 	public void programSearch() throws Exception {
 
-		RestAssured.basePath = "/rest/program/create";
+		RestAssured.basePath = "/rest/program/findById";
 		RestAssured.useRelaxedHTTPSValidation();
-		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)
-				.accept(ContentType.JSON).body(PayloadProgramModule.createProgramPayload()).when().post().then().log().all()
+		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).
+				queryParam("_dc", "1747125904944").
+				queryParam("id", getProgramidreceived()).
+				contentType(ContentType.JSON)
+				.accept(ContentType.JSON).when().get().then().log().all()
 				.statusCode(200).extract().response().asString();
+		
+		assertEquals(JsonConversionUtilities.getRawToJsonData(response, "programName"), getProgramename());
 
 	}
 	
 	
-//	
-//	@Test(testName = "Batch creation")
-//	public void creatNewProgramBatch() {
-//
-//		RestAssured.basePath = "/rest/batch/create";
-//		RestAssured.useRelaxedHTTPSValidation();
-//		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)
-//				.accept(ContentType.JSON).body(PayloadProgramModule.createProgramBatchPayload()).when().post().then().log().all()
-//				.statusCode(200).extract().response().asString();
-//
-//	}
+	@Test(testName = "Batch creation", dependsOnMethods = "programSearch")
+	public void creatNewProgramBatch() throws Exception {
+
+		RestAssured.basePath = "/rest/batch/create";
+		RestAssured.useRelaxedHTTPSValidation();
+		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)
+				.accept(ContentType.JSON).body(PayloadProgramModule.createProgramBatchPayload()).when().post().then().log().all()
+				.statusCode(200).extract().response().asString();
+		 
+		setBatchidreceived(response);
+	}
+	
+	
+	@Test(testName = "Seat creation", dependsOnMethods = "programSearch")
+	public void creatSeatcType() throws Exception {
+
+		RestAssured.basePath = "/rest/programBatchSeatConfiguration/create";
+		RestAssured.useRelaxedHTTPSValidation();
+		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)
+				.accept(ContentType.JSON).body(PayloadProgramModule.createSeatPayload()).when().post().then().log().all()
+				.statusCode(200).extract().response().asString();
+			
+	}
+	
+	
+	
 
 
 

@@ -2,8 +2,8 @@ package pojo;
 
 import variableutility.GlobalVariable;
 
-public class programpojo extends GlobalVariable{
-	
+public class programpojo extends GlobalVariable {
+
 	public static String getProgramename() {
 		return programename;
 	}
@@ -38,6 +38,22 @@ public class programpojo extends GlobalVariable{
 	}
 	public static void setCoursename(String coursename) {
 		GlobalVariable.coursename = coursename;
+	}
+
+	public static String getProgramidreceived() {
+		return programidreceived;
+	}
+
+	public static void setProgramidreceived(String programidreceived) {
+		GlobalVariable.programidreceived = programidreceived;
+	}
+	
+	public static String getBatchidreceived() {
+		return batchidreceived;
+	}
+
+	public static void setBatchidreceived(String batchidreceived) {
+		GlobalVariable.batchidreceived = batchidreceived;
 	}
 
 }

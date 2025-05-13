@@ -36,8 +36,13 @@ public class GlobalVariable {
    public static String coursecode;
    public static String coursename;
 
-   public static int CourseId;
+   public static int courseIdrecived;
    
+   public static String programidreceived;
+   
+   public static String batchidreceived;
+
+
 
 
 

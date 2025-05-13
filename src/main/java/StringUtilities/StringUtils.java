@@ -36,5 +36,14 @@ public class StringUtils {
 		String name = faker.educator().course();
 		return name + RandomStringUtils.randomAlphabetic(6);
 	}
+	
+	
+	public static String randomBatchGenerator() {
+
+		Faker faker = new Faker();
+		String name = faker.animal().name();
+		return "batch"+ name + RandomStringUtils.randomAlphanumeric(4);
+
+	}
 
 }
