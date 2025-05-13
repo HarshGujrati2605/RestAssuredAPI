@@ -43,7 +43,6 @@ public class GlobalVariable {
    
    public static String batchidreceived;
 
-
 	public static String periodname;
 
 	public static String periodidreceived;
