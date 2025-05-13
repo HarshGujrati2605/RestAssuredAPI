@@ -1,17 +1,15 @@
 package payloadutilitis;
 
-import org.apache.commons.lang3.RandomStringUtils;
 
-import StringUtilities.RestStringUtils;
+import StringUtilities.StringUtils;
 import variableutility.GlobalVariable;
 
 public class PayloadAlumniNews extends GlobalVariable {
 	
 	
 	
-	
 	public static String alumninewspayload() {
-		alumninewsfeedname = RestStringUtils.getName();
+		alumninewsfeedname = StringUtils.getName();
 		return "{\"title\": \""+alumninewsfeedname+"\",\"imageUrl\":\"Alumni/NewsAndFeed/alumni_Screenshot 2025-01-29 122117_1741342561.png\",\"status\":\"UNPUBLISHED\",\"alumniNewsAndFeedsMapping\":[{\"academyLocation\":{\"id\":1}}]}";
 	}
 	

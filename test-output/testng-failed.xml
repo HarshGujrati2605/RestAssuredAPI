@@ -7,7 +7,6 @@
         <methods>
           <include name="validatealumninewsandfeeds"/>
           <include name="searchalumninewsandfeeds"/>
-          <include name="deletealumninewsandfeeds"/>
           <include name="editalumninewsandfeeds"/>
           <include name="postalumninewsandfeeds"/>
         </methods>

@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-12T15:59:13 IST" name="Default suite" finished-at="2025-05-12T15:59:17 IST" duration-ms="3815">
+  <suite started-at="2025-05-13T11:11:33 IST" name="Default suite" finished-at="2025-05-13T11:11:41 IST" duration-ms="8552">
     <groups>
     </groups>
-    <test started-at="2025-05-12T15:59:13 IST" name="Default test" finished-at="2025-05-12T15:59:17 IST" duration-ms="3815">
+    <test started-at="2025-05-13T11:11:33 IST" name="Default test" finished-at="2025-05-13T11:11:41 IST" duration-ms="8552">
       <class name="academiatestcases.TC01AlumniNewsFeedValidation">
-        <test-method signature="postalumninewsandfeeds()[pri:0, instance:academiatestcases.TC01AlumniNewsFeedValidation@2ddc9a9f]" started-at="2025-05-12T15:59:13 IST" name="postalumninewsandfeeds" finished-at="2025-05-12T15:59:15 IST" duration-ms="1806" status="PASS">
+        <test-method signature="postalumninewsandfeeds()[pri:0, instance:academiatestcases.TC01AlumniNewsFeedValidation@f0c8a99]" started-at="2025-05-13T11:11:33 IST" name="postalumninewsandfeeds" finished-at="2025-05-13T11:11:37 IST" duration-ms="4694" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postalumninewsandfeeds -->
-        <test-method signature="searchalumninewsandfeeds()[pri:0, instance:academiatestcases.TC01AlumniNewsFeedValidation@2ddc9a9f]" started-at="2025-05-12T15:59:15 IST" name="searchalumninewsandfeeds" finished-at="2025-05-12T15:59:16 IST" depends-on-methods="academiatestcases.TC01AlumniNewsFeedValidation.postalumninewsandfeeds" duration-ms="958" status="PASS">
+        <test-method signature="searchalumninewsandfeeds()[pri:0, instance:academiatestcases.TC01AlumniNewsFeedValidation@f0c8a99]" started-at="2025-05-13T11:11:37 IST" name="searchalumninewsandfeeds" finished-at="2025-05-13T11:11:38 IST" depends-on-methods="academiatestcases.TC01AlumniNewsFeedValidation.postalumninewsandfeeds" duration-ms="1194" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchalumninewsandfeeds -->
-        <test-method signature="validatealumninewsandfeeds()[pri:0, instance:academiatestcases.TC01AlumniNewsFeedValidation@2ddc9a9f]" started-at="2025-05-12T15:59:16 IST" name="validatealumninewsandfeeds" finished-at="2025-05-12T15:59:17 IST" depends-on-methods="academiatestcases.TC01AlumniNewsFeedValidation.searchalumninewsandfeeds" duration-ms="534" status="PASS">
+        <test-method signature="validatealumninewsandfeeds()[pri:0, instance:academiatestcases.TC01AlumniNewsFeedValidation@f0c8a99]" started-at="2025-05-13T11:11:38 IST" name="validatealumninewsandfeeds" finished-at="2025-05-13T11:11:39 IST" depends-on-methods="academiatestcases.TC01AlumniNewsFeedValidation.searchalumninewsandfeeds" duration-ms="690" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validatealumninewsandfeeds -->
-        <test-method signature="editalumninewsandfeeds()[pri:0, instance:academiatestcases.TC01AlumniNewsFeedValidation@2ddc9a9f]" started-at="2025-05-12T15:59:17 IST" name="editalumninewsandfeeds" finished-at="2025-05-12T15:59:17 IST" depends-on-methods="academiatestcases.TC01AlumniNewsFeedValidation.validatealumninewsandfeeds" duration-ms="477" status="PASS">
+        <test-method signature="editalumninewsandfeeds()[pri:0, instance:academiatestcases.TC01AlumniNewsFeedValidation@f0c8a99]" started-at="2025-05-13T11:11:39 IST" name="editalumninewsandfeeds" finished-at="2025-05-13T11:11:41 IST" depends-on-methods="academiatestcases.TC01AlumniNewsFeedValidation.validatealumninewsandfeeds" duration-ms="1934" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editalumninewsandfeeds -->
