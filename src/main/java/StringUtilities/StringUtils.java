@@ -31,5 +31,14 @@ public class StringUtils {
 		return name + RandomStringUtils.randomAlphabetic(8);
 
 	}
+	
+	
+	public static String randomBatchGenerator() {
+
+		Faker faker = new Faker();
+		String name = faker.animal().name();
+		return "batch"+ name + RandomStringUtils.randomAlphanumeric(4);
+
+	}
 
 }
