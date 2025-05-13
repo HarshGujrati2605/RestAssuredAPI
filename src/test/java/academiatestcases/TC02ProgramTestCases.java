@@ -16,24 +16,22 @@ import pojo.programpojo;
 import specbuilder.newsandfeedspecs;
 import variableutility.GlobalVariable;
 
+public class TC02ProgramTestCases extends programpojo {
 
-public class TC02ProgramTestCases extends programpojo{
-
-	
 	@Test(priority = 1, testName = "Create Course")
 	public void creatNewCourse() throws Exception {
 		setAccessToken(BaseClass.getAccessToken());
 		RestAssured.basePath = "/rest/course/create";
 		RestAssured.useRelaxedHTTPSValidation();
 		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)
-				.accept(ContentType.JSON).body(PayloadProgramModule.CreateCoursePayload()).log().all().when().post().then()
-				.statusCode(200).extract().response().asString();		
-		System.out.println("Cousre Id : "+response.trim());
-		
+				.accept(ContentType.JSON).body(PayloadProgramModule.CreateCoursePayload()).log().all().when().post()
+				.then().statusCode(200).extract().response().asString();
+		System.out.println("Cousre Id : " + response.trim());
+
 		GlobalVariable.courseIdrecived = Integer.parseInt(response);
 
-	}	
-	
+	}
+
 	@Test(testName = "Program creation", dependsOnMethods = "creatNewCourse")
 	public void creatNewProgram() throws Exception {
 		RestAssured.basePath = "/rest/program/create";
@@ -49,7 +47,6 @@ public class TC02ProgramTestCases extends programpojo{
 
 	@Test(testName = "Program search and validation", dependsOnMethods = "creatNewProgram")
 	public void programSearch() throws Exception {
-
 
 		RestAssured.basePath = "/rest/program/findById";
 		RestAssured.useRelaxedHTTPSValidation();
@@ -74,10 +71,8 @@ public class TC02ProgramTestCases extends programpojo{
 		setBatchidreceived(response);
 	}
 
-
 	@Test(testName = "Seat creation", dependsOnMethods = "creatNewProgramBatch")
 	public void creatSeatcType() throws Exception {
-
 
 		RestAssured.basePath = "/rest/programBatchSeatConfiguration/create";
 		RestAssured.useRelaxedHTTPSValidation();
@@ -97,6 +92,17 @@ public class TC02ProgramTestCases extends programpojo{
 				.all().statusCode(200).extract().response().asString();
 
 		setPeriodidreceived(response);
+
+	}
+
+	@Test(testName = "Period creation", dependsOnMethods = "creatPeriod")
+	public void courseMappingwithBatch() throws Exception {
+
+		RestAssured.basePath = "/rest/programBatchCourse/create";
+		RestAssured.useRelaxedHTTPSValidation();
+		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)
+				.accept(ContentType.JSON).body(PayloadProgramModule.payloadCourseMapping()).when().post().then().log()
+				.all().statusCode(200).extract().response().asString();
 
 	}
 
