@@ -12,6 +12,7 @@ import CommonUtilities.JsonConversionUtilities;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import javautilities.BaseClass;
 import payloadutilitis.PayloadAlumniNews;
 import pojo.AlumniPojo;
 import specbuilder.newsandfeedspecs;
@@ -20,8 +21,8 @@ import variableutility.GlobalVariable;
 public class TC01AlumniNewsFeedValidation extends AlumniPojo{
 
 	@Test(testName = "Alumni news feed creation")
-	public void postalumninewsandfeeds() {
-
+	public void postalumninewsandfeeds() throws Exception {
+		setAccessToken(BaseClass.getAccessToken());
 		RestAssured.basePath = "/rest/alumniNewsFeeds/saveNewsAndFeeds";
 		RestAssured.useRelaxedHTTPSValidation();
 		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)
@@ -31,7 +32,7 @@ public class TC01AlumniNewsFeedValidation extends AlumniPojo{
 	}
 
 	@Test(testName = "Search Created Alumni news feed", dependsOnMethods = "postalumninewsandfeeds")
-	public void searchalumninewsandfeeds() {
+	public void searchalumninewsandfeeds() throws Exception {
 		RestAssured.basePath = "/rest/alumniNewsFeeds/gridData";
 		RestAssured.useRelaxedHTTPSValidation();
 		Response response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder())
@@ -46,7 +47,7 @@ public class TC01AlumniNewsFeedValidation extends AlumniPojo{
 	}
 
 	@Test(testName = "Created Alumni news feed validations", dependsOnMethods = "searchalumninewsandfeeds")
-	public void validatealumninewsandfeeds() {
+	public void validatealumninewsandfeeds() throws Exception {
 		RestAssured.basePath = "/rest/alumniNewsFeeds/newsFeedsDataById";
 		RestAssured.useRelaxedHTTPSValidation();
 		Response response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder())
@@ -68,7 +69,7 @@ public class TC01AlumniNewsFeedValidation extends AlumniPojo{
 	
 	
 	@Test(testName = "Alumni news feed editing" , dependsOnMethods = "validatealumninewsandfeeds")
-	public void editalumninewsandfeeds() {
+	public void editalumninewsandfeeds() throws Exception {
 
 		RestAssured.basePath = "/rest/alumniNewsFeeds/saveNewsAndFeeds"; 
 		RestAssured.useRelaxedHTTPSValidation();
@@ -79,7 +80,7 @@ public class TC01AlumniNewsFeedValidation extends AlumniPojo{
 	}
 	
 	@Test(testName = "Alumni news feed Deleting" , dependsOnMethods = "editalumninewsandfeeds" , enabled = false)
-	public void deletealumninewsandfeeds() {
+	public void deletealumninewsandfeeds() throws Exception {
 
 		RestAssured.basePath = "/rest/alumniNewsFeeds/newsFeedDelete"; 
 		RestAssured.useRelaxedHTTPSValidation();

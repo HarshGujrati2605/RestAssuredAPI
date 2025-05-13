@@ -34,5 +34,13 @@ public class AlumniPojo extends GlobalVariable {
 	public static void setAlumninewscode(String alumninewscode) {
 		GlobalVariable.alumninewscode = alumninewscode;
 	}
+	
+	public static String getAccessToken() {
+		return accessToken;
+	}
+
+	public static void setAccessToken(String accessToken) {
+		GlobalVariable.accessToken = accessToken;
+	}
 
 }

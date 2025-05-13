@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-05-13T16:46:13 IST" name="Default suite" finished-at="2025-05-13T16:46:18 IST" duration-ms="4765">
+    <groups>
+    </groups>
+    <test started-at="2025-05-13T16:46:13 IST" name="Default test" finished-at="2025-05-13T16:46:18 IST" duration-ms="4765">
+      <class name="academiatestcases.TC02ProgramTestCases">
+        <test-method signature="creatNewCourse()[pri:1, instance:academiatestcases.TC02ProgramTestCases@53fe15ff]" started-at="2025-05-13T16:46:13 IST" name="creatNewCourse" finished-at="2025-05-13T16:46:15 IST" duration-ms="2357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- creatNewCourse -->
+        <test-method signature="creatNewProgram()[pri:0, instance:academiatestcases.TC02ProgramTestCases@53fe15ff]" started-at="2025-05-13T16:46:15 IST" name="creatNewProgram" finished-at="2025-05-13T16:46:17 IST" depends-on-methods="academiatestcases.TC02ProgramTestCases.creatNewCourse" duration-ms="1238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- creatNewProgram -->
+        <test-method signature="programSearch()[pri:0, instance:academiatestcases.TC02ProgramTestCases@53fe15ff]" started-at="2025-05-13T16:46:17 IST" name="programSearch" finished-at="2025-05-13T16:46:18 IST" depends-on-methods="academiatestcases.TC02ProgramTestCases.creatNewProgram" duration-ms="1124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- programSearch -->
+      </class> <!-- academiatestcases.TC02ProgramTestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
+=======
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
@@ -31,3 +58,4 @@
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
+>>>>>>> ba83143c07fcd932af50fd61654960de36cd40a9

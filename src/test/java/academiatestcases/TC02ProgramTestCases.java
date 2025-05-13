@@ -9,16 +9,33 @@ import CommonUtilities.JsonConversionUtilities;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import javautilities.BaseClass;
 import payloadutilitis.PayloadAlumniNews;
 import payloadutilitis.PayloadProgramModule;
 import pojo.programpojo;
 import specbuilder.newsandfeedspecs;
 import variableutility.GlobalVariable;
 
-public class TC02ProgramTestCases extends programpojo {
-	@Test(testName = "Program creation")
-	public void creatNewProgram() {
 
+public class TC02ProgramTestCases extends programpojo{
+
+	
+	@Test(priority = 1, testName = "Create Course")
+	public void creatNewCourse() throws Exception {
+		setAccessToken(BaseClass.getAccessToken());
+		RestAssured.basePath = "/rest/course/create";
+		RestAssured.useRelaxedHTTPSValidation();
+		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)
+				.accept(ContentType.JSON).body(PayloadProgramModule.CreateCoursePayload()).log().all().when().post().then()
+				.statusCode(200).extract().response().asString();		
+		System.out.println("Cousre Id : "+response.trim());
+		
+		GlobalVariable.courseIdrecived = Integer.parseInt(response);
+
+	}	
+	
+	@Test(testName = "Program creation", dependsOnMethods = "creatNewCourse")
+	public void creatNewProgram() throws Exception {
 		RestAssured.basePath = "/rest/program/create";
 		RestAssured.useRelaxedHTTPSValidation();
 		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)
@@ -31,7 +48,8 @@ public class TC02ProgramTestCases extends programpojo {
 	}
 
 	@Test(testName = "Program search and validation", dependsOnMethods = "creatNewProgram")
-	public void programSearch() {
+	public void programSearch() throws Exception {
+
 
 		RestAssured.basePath = "/rest/program/findById";
 		RestAssured.useRelaxedHTTPSValidation();
@@ -45,7 +63,7 @@ public class TC02ProgramTestCases extends programpojo {
 	}
 
 	@Test(testName = "Batch creation", dependsOnMethods = "programSearch")
-	public void creatNewProgramBatch() {
+	public void creatNewProgramBatch() throws Exception {
 
 		RestAssured.basePath = "/rest/batch/create";
 		RestAssured.useRelaxedHTTPSValidation();
@@ -56,8 +74,10 @@ public class TC02ProgramTestCases extends programpojo {
 		setBatchidreceived(response);
 	}
 
+
 	@Test(testName = "Seat creation", dependsOnMethods = "creatNewProgramBatch")
-	public void creatSeatcType() {
+	public void creatSeatcType() throws Exception {
+
 
 		RestAssured.basePath = "/rest/programBatchSeatConfiguration/create";
 		RestAssured.useRelaxedHTTPSValidation();
@@ -68,7 +88,7 @@ public class TC02ProgramTestCases extends programpojo {
 	}
 
 	@Test(testName = "Period creation", dependsOnMethods = "creatSeatcType")
-	public void creatPeriod() {
+	public void creatPeriod() throws Exception {
 
 		RestAssured.basePath = "/rest/programBatchPeriodConfiguration/create";
 		RestAssured.useRelaxedHTTPSValidation();

@@ -14,23 +14,28 @@ public class StringUtils {
 	}
 
 	public static String getEmail() {
-
 		String name = RandomStringUtils.randomAlphabetic(10);
 		return name + "@testautomation.com";
 	}
 
 	public static String randomPrgCodeGenerator() {
-
 		return "prgcode" + RandomStringUtils.randomNumeric(6);
-
 	}
 
 	public static String randomProgramNamegenerator() {
-
 		Faker faker = new Faker();
 		String name = faker.educator().course();
 		return name + RandomStringUtils.randomAlphabetic(8);
+	}
 
+	public static String randomCourseCodeGenerator() {
+		return "Coursecode" + RandomStringUtils.randomNumeric(6);
+	}
+
+	public static String randomCourseNamegenerator() {
+		Faker faker = new Faker();
+		String name = faker.educator().course();
+		return name + RandomStringUtils.randomAlphabetic(6);
 	}
 	
 	public static String randomPeriodNamegenerator() {
