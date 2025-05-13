@@ -346,4 +346,27 @@ public static String createPeriodPayload() {
 			+ "}";
 }
 
+public static String payloadCourseMapping() {
+	return "{\r\n"
+			+ "  \"version\": \"\",\r\n"
+			+ "  \"courseId\": \"\",\r\n"
+			+ "  \"batchId\": "+getBatchidreceived()+",\r\n"
+			+ "  \"whetherOptional\": false,\r\n"
+			+ "  \"courseCode\": \"\",\r\n"
+			+ "  \"courseName\": \"\",\r\n"
+			+ "  \"courseGroupCount\": \"\",\r\n"
+			+ "  \"courseGroupId\": \"\",\r\n"
+			+ "  \"courseGroupName\": \"\",\r\n"
+			+ "  \"courseIds\": \""+courseIdrecived+"\",\r\n"
+			+ "  \"courseRepeatable\": \"\",\r\n"
+			+ "  \"enrollmentCriteria\": \"\",\r\n"
+			+ "  \"id\": \"\",\r\n"
+			+ "  \"isOfferedYearly\": false,\r\n"
+			+ "  \"periodDisplayObj\": null,\r\n"
+			+ "  \"periodId\": \"\",\r\n"
+			+ "  \"periodObj\": null,\r\n"
+			+ "  \"whetherMajor\": false\r\n"
+			+ "}"
+;}
+
 }
