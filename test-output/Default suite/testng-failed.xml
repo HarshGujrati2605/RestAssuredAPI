@@ -5,8 +5,11 @@
     <classes>
       <class name="academiatestcases.TC02ProgramTestCases">
         <methods>
+          <include name="creatSeatcType"/>
           <include name="programSearch"/>
           <include name="creatNewProgram"/>
+          <include name="creatPeriod"/>
+          <include name="creatNewProgramBatch"/>
         </methods>
       </class> <!-- academiatestcases.TC02ProgramTestCases -->
     </classes>

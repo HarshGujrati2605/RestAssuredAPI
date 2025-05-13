@@ -3,6 +3,7 @@ package StringUtilities;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import com.github.javafaker.Faker;
+import com.github.javafaker.IdNumber;
 
 public class StringUtils {
 
@@ -32,9 +33,14 @@ public class StringUtils {
 
 	}
 	
+	public static String randomPeriodNamegenerator() {
+		return "period"+ RandomStringUtils.randomAlphabetic(9);
+
+	}
+	
+	
 	
 	public static String randomBatchGenerator() {
-
 		Faker faker = new Faker();
 		String name = faker.animal().name();
 		return "batch"+ name + RandomStringUtils.randomAlphanumeric(4);
