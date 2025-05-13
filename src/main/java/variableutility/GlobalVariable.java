@@ -32,6 +32,12 @@ public class GlobalVariable {
    public static String programename;
    
    public static String programcode;
+   
+   public static String programidreceived;
+   
+   public static String batchidreceived;
+
+
 
 
 
