@@ -24,7 +24,7 @@ public class TC02ProgramTestCases extends programpojo {
 		RestAssured.basePath = "/rest/course/create";
 		RestAssured.useRelaxedHTTPSValidation();
 		String response = given().log().all().spec(newsandfeedspecs.academiaspecbuilder()).contentType(ContentType.JSON)
-				.accept(ContentType.JSON).body(PayloadProgramModule.CreateCoursePayload()).log().all().when().post()
+				.accept(ContentType.JSON).body(PayloadProgramModule.Automation_CreateCoursePayload()).log().all().when().post()
 				.then().statusCode(200).extract().response().asString();
 		System.out.println("Cousre Id : " + response.trim());
 
