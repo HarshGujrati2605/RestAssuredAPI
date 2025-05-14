@@ -12,6 +12,8 @@ public class StringUtils {
 		String name = RandomStringUtils.randomAlphabetic(8);
 		return "AutomationName " + name;
 	}
+	
+	
 
 	public static String getEmail() {
 		String name = RandomStringUtils.randomAlphabetic(10);
@@ -20,6 +22,10 @@ public class StringUtils {
 
 	public static String randomPrgCodeGenerator() {
 		return "prgcode" + RandomStringUtils.randomNumeric(6);
+	}
+	
+	public static String randomProgramSequenceGenerator() {
+		return RandomStringUtils.randomNumeric(6);
 	}
 
 	public static String randomProgramNamegenerator() {

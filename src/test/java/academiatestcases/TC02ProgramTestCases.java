@@ -5,13 +5,13 @@ import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.Test;
 
+import AppLib.ApiLib.payloadutils.PayloadProgramModule;
 import CommonUtilities.JsonConversionUtilities;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import javautilities.BaseClass;
 import payloadutilitis.PayloadAlumniNews;
-import payloadutilitis.PayloadProgramModule;
 import pojo.programpojo;
 import specbuilder.newsandfeedspecs;
 import variableutility.GlobalVariable;
@@ -27,8 +27,7 @@ public class TC02ProgramTestCases extends programpojo {
 				.accept(ContentType.JSON).body(PayloadProgramModule.CreateCoursePayload()).log().all().when().post()
 				.then().statusCode(200).extract().response().asString();
 		System.out.println("Cousre Id : " + response.trim());
-
-		GlobalVariable.courseIdrecived = Integer.parseInt(response);
+		setCourseIdrecived(Integer.parseInt(response));
 
 	}
 
@@ -95,7 +94,7 @@ public class TC02ProgramTestCases extends programpojo {
 
 	}
 
-	@Test(testName = "Period creation", dependsOnMethods = "creatPeriod")
+	@Test(testName = "Course creation in batch", dependsOnMethods = "creatPeriod")
 	public void courseMappingwithBatch() throws Exception {
 
 		RestAssured.basePath = "/rest/programBatchCourse/create";
