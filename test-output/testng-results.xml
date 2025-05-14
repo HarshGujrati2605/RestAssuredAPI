@@ -2,36 +2,36 @@
 <testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-13T18:26:01 IST" name="Default suite" finished-at="2025-05-13T18:26:08 IST" duration-ms="6627">
+  <suite started-at="2025-05-14T10:08:05 IST" name="Default suite" finished-at="2025-05-14T10:08:22 IST" duration-ms="17196">
     <groups>
     </groups>
-    <test started-at="2025-05-13T18:26:01 IST" name="Default test" finished-at="2025-05-13T18:26:08 IST" duration-ms="6627">
+    <test started-at="2025-05-14T10:08:05 IST" name="Default test" finished-at="2025-05-14T10:08:22 IST" duration-ms="17196">
       <class name="academiatestcases.TC02ProgramTestCases">
-        <test-method signature="creatNewCourse()[pri:1, instance:academiatestcases.TC02ProgramTestCases@173ed316]" started-at="2025-05-13T18:26:01 IST" name="creatNewCourse" finished-at="2025-05-13T18:26:03 IST" duration-ms="1991" status="PASS">
+        <test-method signature="creatNewCourse()[pri:1, instance:academiatestcases.TC02ProgramTestCases@173ed316]" started-at="2025-05-14T10:08:05 IST" name="creatNewCourse" finished-at="2025-05-14T10:08:10 IST" duration-ms="4755" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- creatNewCourse -->
-        <test-method signature="creatNewProgram()[pri:0, instance:academiatestcases.TC02ProgramTestCases@173ed316]" started-at="2025-05-13T18:26:03 IST" name="creatNewProgram" finished-at="2025-05-13T18:26:05 IST" depends-on-methods="academiatestcases.TC02ProgramTestCases.creatNewCourse" duration-ms="1403" status="PASS">
+        <test-method signature="creatNewProgram()[pri:0, instance:academiatestcases.TC02ProgramTestCases@173ed316]" started-at="2025-05-14T10:08:10 IST" name="creatNewProgram" finished-at="2025-05-14T10:08:13 IST" depends-on-methods="academiatestcases.TC02ProgramTestCases.creatNewCourse" duration-ms="3869" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- creatNewProgram -->
-        <test-method signature="programSearch()[pri:0, instance:academiatestcases.TC02ProgramTestCases@173ed316]" started-at="2025-05-13T18:26:05 IST" name="programSearch" finished-at="2025-05-13T18:26:06 IST" depends-on-methods="academiatestcases.TC02ProgramTestCases.creatNewProgram" duration-ms="1020" status="PASS">
+        <test-method signature="programSearch()[pri:0, instance:academiatestcases.TC02ProgramTestCases@173ed316]" started-at="2025-05-14T10:08:13 IST" name="programSearch" finished-at="2025-05-14T10:08:15 IST" depends-on-methods="academiatestcases.TC02ProgramTestCases.creatNewProgram" duration-ms="1445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- programSearch -->
-        <test-method signature="creatNewProgramBatch()[pri:0, instance:academiatestcases.TC02ProgramTestCases@173ed316]" started-at="2025-05-13T18:26:06 IST" name="creatNewProgramBatch" finished-at="2025-05-13T18:26:06 IST" depends-on-methods="academiatestcases.TC02ProgramTestCases.programSearch" duration-ms="564" status="PASS">
+        <test-method signature="creatNewProgramBatch()[pri:0, instance:academiatestcases.TC02ProgramTestCases@173ed316]" started-at="2025-05-14T10:08:15 IST" name="creatNewProgramBatch" finished-at="2025-05-14T10:08:17 IST" depends-on-methods="academiatestcases.TC02ProgramTestCases.programSearch" duration-ms="1846" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- creatNewProgramBatch -->
-        <test-method signature="creatSeatcType()[pri:0, instance:academiatestcases.TC02ProgramTestCases@173ed316]" started-at="2025-05-13T18:26:06 IST" name="creatSeatcType" finished-at="2025-05-13T18:26:07 IST" depends-on-methods="academiatestcases.TC02ProgramTestCases.creatNewProgramBatch" duration-ms="558" status="PASS">
+        <test-method signature="creatSeatcType()[pri:0, instance:academiatestcases.TC02ProgramTestCases@173ed316]" started-at="2025-05-14T10:08:17 IST" name="creatSeatcType" finished-at="2025-05-14T10:08:18 IST" depends-on-methods="academiatestcases.TC02ProgramTestCases.creatNewProgramBatch" duration-ms="1287" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- creatSeatcType -->
-        <test-method signature="creatPeriod()[pri:0, instance:academiatestcases.TC02ProgramTestCases@173ed316]" started-at="2025-05-13T18:26:07 IST" name="creatPeriod" finished-at="2025-05-13T18:26:07 IST" depends-on-methods="academiatestcases.TC02ProgramTestCases.creatSeatcType" duration-ms="545" status="PASS">
+        <test-method signature="creatPeriod()[pri:0, instance:academiatestcases.TC02ProgramTestCases@173ed316]" started-at="2025-05-14T10:08:18 IST" name="creatPeriod" finished-at="2025-05-14T10:08:20 IST" depends-on-methods="academiatestcases.TC02ProgramTestCases.creatSeatcType" duration-ms="1886" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- creatPeriod -->
-        <test-method signature="courseMappingwithBatch()[pri:0, instance:academiatestcases.TC02ProgramTestCases@173ed316]" started-at="2025-05-13T18:26:07 IST" name="courseMappingwithBatch" finished-at="2025-05-13T18:26:08 IST" depends-on-methods="academiatestcases.TC02ProgramTestCases.creatPeriod" duration-ms="482" status="PASS">
+        <test-method signature="courseMappingwithBatch()[pri:0, instance:academiatestcases.TC02ProgramTestCases@173ed316]" started-at="2025-05-14T10:08:20 IST" name="courseMappingwithBatch" finished-at="2025-05-14T10:08:22 IST" depends-on-methods="academiatestcases.TC02ProgramTestCases.creatPeriod" duration-ms="2063" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- courseMappingwithBatch -->
