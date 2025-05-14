@@ -49,6 +49,8 @@ public class GlobalVariable {
 	
 	public static String applicantName;
 	public static int applicationIDrecived;
+	public static int AdmissionDetailsIdrecived;
+	public static String admissiondate;
 
 
 }
