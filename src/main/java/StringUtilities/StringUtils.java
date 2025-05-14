@@ -4,6 +4,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 import com.github.javafaker.Faker;
 import com.github.javafaker.IdNumber;
+import com.github.javafaker.Name;
 
 public class StringUtils {
 
@@ -29,7 +30,7 @@ public class StringUtils {
 	}
 
 	public static String randomCourseCodeGenerator() {
-		return "Coursecode" + RandomStringUtils.randomNumeric(6);
+		return "Coursecode " + RandomStringUtils.randomAlphabetic(6);
 	}
 
 	public static String randomCourseNamegenerator() {
@@ -41,14 +42,18 @@ public class StringUtils {
 	public static String randomPeriodNamegenerator() {
 		return "period"+ RandomStringUtils.randomAlphabetic(9);
 
-	}
-	
-	
-	
+	}	
 	public static String randomBatchGenerator() {
 		Faker faker = new Faker();
 		String name = faker.animal().name();
 		return "batch"+ name + RandomStringUtils.randomAlphanumeric(4);
+
+	}
+	
+	public static String randomApplicantNameGenerator() {
+		Faker faker = new Faker();
+		String name = faker.name().lastName();
+		return "Applicant "+ name;
 
 	}
 
