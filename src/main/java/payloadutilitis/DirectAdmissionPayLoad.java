@@ -216,7 +216,7 @@ public static String Automation_CreateDirectAdmission() {
 				+ "        \"mobileNumber\": \"9874566547\",\r\n"
 				+ "        \"alternateMobileCountryCode\": \"\",\r\n"
 				+ "        \"alternateMobileNo\": \"\",\r\n"
-				+ "        \"emailId\": \"test^@gmail.com\",\r\n"
+				+ "        \"emailId\": \"test@gmail.com\",\r\n"
 				+ "        \"alternateEmailId\": \"\",\r\n"
 				+ "        \"emergencyFirstName\": \"\",\r\n"
 				+ "        \"emergencyLastName\": \"\",\r\n"

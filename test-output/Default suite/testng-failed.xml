@@ -5,7 +5,11 @@
     <classes>
       <class name="academiatestcases.TC03AdmissionTestCases">
         <methods>
-          <include name="creatNewCourse"/>
+          <include name="DirectAdmission_Admission_Approve"/>
+          <include name="After_Approve_GetAdmission_Details"/>
+          <include name="DirectAdmission_Application_Approve"/>
+          <include name="DirectAdmission_AddProgramInAdmissionDetails"/>
+          <include name="DirectAdmission_creatNewApplication"/>
         </methods>
       </class> <!-- academiatestcases.TC03AdmissionTestCases -->
     </classes>
