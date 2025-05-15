@@ -102,6 +102,7 @@ public class TC03AdmissionTestCases extends AdmissionPojo {
 		String response = given().log().all().spec(newsandfeedspecs.After_Approve_Admission_Details_academiaspecbuilder()).contentType(ContentType.JSON)
 				.accept(ContentType.JSON).log().all().when().get()
 				.then().log().all().statusCode(200).extract().response().asString();
+		
 		System.out.println("Application Id : " + response.trim());
 
 		String status = JsonConversionUtilities.getArrayRawToJsonData(response, "status");

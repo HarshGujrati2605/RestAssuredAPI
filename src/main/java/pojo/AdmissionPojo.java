@@ -4,6 +4,9 @@ import variableutility.GlobalVariable;
 
 public class AdmissionPojo extends GlobalVariable{
 	
+	
+	private static  String admissionstatus;
+	
 	public static String getApplicantName() {
 		return applicantName;
 	}
@@ -17,6 +20,12 @@ public class AdmissionPojo extends GlobalVariable{
 
 	public static void setAccessToken(String accessToken) {
 		GlobalVariable.accessToken = accessToken;
+	}
+	public String getAdmissionstatus() {
+		return admissionstatus;
+	}
+	public void setAdmissionstatus(String admissionstatus) {
+		AdmissionPojo.admissionstatus = admissionstatus;
 	}
 
 }
